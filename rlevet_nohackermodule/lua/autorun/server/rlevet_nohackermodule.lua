@@ -59,7 +59,7 @@ hook.Add("PlayerSpawn","rlevetnohackermodule",function(ply)
 			print("[NoHacker Module] " .. ply:Nick() .. " (" .. ply:SteamID() .. " - " .. nohacker_target_usergroup .. ") has been demoted!")
 			ply:PrintMessage(HUD_PRINTCONSOLE, "[NoHacker Module] You are not a registered admin!") -- Used for client logs, in case of error
 			
-			while file.Exists("nohacker_module/reports/"..nohacker_reportcount..".txt", "DATA") then -- This should not lag the server, but if it does, be sure to delete everything in garrysmod/data/nohacker_module/reports/
+			while file.Exists("nohacker_module/reports/"..nohacker_reportcount..".txt", "DATA") do -- This should not lag the server, but if it does, be sure to delete everything in garrysmod/data/nohacker_module/reports/
 				nohacker_reportcount = nohacker_reportcount + 1
 			end
 			
